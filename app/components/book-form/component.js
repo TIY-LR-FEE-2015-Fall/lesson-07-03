@@ -10,6 +10,6 @@ export default Ember.Component.extend({
 
     var data = this.getProperties('title', 'author', 'isbn', 'year');
 
-    console.log(data);
+    this.sendAction('onsubmit', data);
   },
 });
