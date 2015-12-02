@@ -1,15 +1,1 @@
-<nav>
-  <ul>
-    <li>
-      {{#link-to 'books.new'}}New Book{{/link-to}}
-    </li>
-  </ul>
-</nav>
-
-{{#each model as |book|}}
-<div class="book">
-  <h2>{{ book.title }} - <span class="author">{{ book.author }}</span></h2>
-</div>
-{{/each}}
-
 {{outlet}}
