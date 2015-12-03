@@ -9,7 +9,11 @@
 {{#each model as |book|}}
   {{#unless book.isNew}}
     <div class="book">
-      <h2>{{ book.title }} - <span class="author">{{ book.author }}</span></h2>
+      <h2>
+        {{#link-to 'books.edit' book}}
+          {{ book.title }} - <span class="author">{{ book.author }}</span>
+        {{/link-to}}
+      </h2>
     </div>
   {{/unless}}
 {{/each}}
