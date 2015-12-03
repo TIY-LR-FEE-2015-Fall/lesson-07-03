@@ -8,6 +8,12 @@ export default Ember.Component.extend({
     // Grab title, author, isbn, year from startingValues
     var startingValues = this.get('startingValues');
 
+    // Don't populate the form if no startingValues are
+    // passed in to the component
+    if (!startingValues) {
+      return;
+    }
+
     var data = startingValues.getProperties('title', 'author', 'isbn', 'year');
 
     // Set title, author, isbn, year on current component
