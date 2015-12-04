@@ -1,9 +1,11 @@
-<h2>Editing {{model.title}}</h2>
+<div class="mdl-cell mdl-cell--12-col">
+  <h2>Editing {{model.title}}</h2>
 
-{{book-form startingValues=model onsubmit='saveBook'}}
+  {{book-form startingValues=model onsubmit='saveBook'}}
 
-<ul>
-  {{#each model.checkIns as |cI|}}
-    <li>{{cI.checkedOutAt}}</li>
-  {{/each}}
-</ul>
+  <ul>
+    {{#each model.checkIns as |cI|}}
+      <li>{{cI.checkedOutAt}}</li>
+    {{/each}}
+  </ul>
+</div>

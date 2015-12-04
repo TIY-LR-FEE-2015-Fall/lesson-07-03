@@ -1,1 +1,12 @@
+@import '_color-definitions';
+
+$color-primary: $palette-blue-grey-500;
+$color-primary-dark: $palette-blue-grey-700;
+$color-accent: $palette-deep-orange-A200;
+
 @import 'material-design-lite';
+
+.mdl-data-table td,
+.mdl-data-table th {
+  text-align: left;
+}

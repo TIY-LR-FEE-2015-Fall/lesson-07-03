@@ -1,19 +1,11 @@
-<nav>
-  <ul>
-    <li>
-      {{#link-to 'books.new'}}New Book{{/link-to}}
-    </li>
-  </ul>
-</nav>
-
-{{#each model as |book|}}
-  {{#unless book.isNew}}
-    <div class="book">
-      <h2>
-        {{#link-to 'books.edit' book}}
-          {{ book.title }} - <span class="author">{{ book.author }}</span>
-        {{/link-to}}
-      </h2>
-    </div>
-  {{/unless}}
-{{/each}}
+{{#mdl-table content=model class="mdl-cell mdl-cell--12-col" as |row|}}
+  {{#mdl-table-col label="Author"}}
+    {{row.author}}
+  {{/mdl-table-col}}
+  {{#mdl-table-col label="Title"}}
+    {{row.title}}
+  {{/mdl-table-col}}
+  {{#mdl-table-col}}
+    {{#link-to 'books.edit' row}}Edit{{/link-to}}
+  {{/mdl-table-col}}
+{{/mdl-table}}
