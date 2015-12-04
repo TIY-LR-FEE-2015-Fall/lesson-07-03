@@ -1,3 +1,8 @@
-<h2 id="title">Ember Library</h2>
+{{#mdl-nav title='Book Library' fixedHeader=true}}
+  {{mdl-nav-item name='All Books' route='books.index'}}
+  {{mdl-nav-item name='New Book' route='books.new'}}
 
-{{outlet}}
+  <div class="mdl-grid">
+    {{outlet}}
+  </div>
+{{/mdl-nav}}
